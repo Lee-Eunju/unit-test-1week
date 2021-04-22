@@ -1,47 +1,44 @@
-
-import org.junit.Before;
 import org.junit.Test;
-
-import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 public class CustomCalculatorTest {
 
     private CustomCalculator customCalculator;
 
-    //더하기 테스트 작성
+    //더하기 테스트를 진행합니다.
     @Test
-    public void add() {
+    public void addTest(){
         customCalculator = new CustomCalculator();
-        int result = customCalculator.add(10,15);
-        /* 이곳에 테스트 코드를 작성하세요. */
-        System.out.println("result :: " + result);
+        int result = customCalculator.add(10, 10);
+        /* 테스트 코드 입력 */
+        assertTrue(result == 20);
+        //assertFalse(result == 19);
     }
 
-    //빼기 테스트 작성
+    // 빼기 테스트를 진행합니다.
     @Test
-    public void subtract() {
+    public void subTest(){
         customCalculator = new CustomCalculator();
-        int result = customCalculator.subtract(23,10);
-        /* 이곳에 테스트 코드를 작성하세요. */
-        System.out.println("result :: " + result);
+        int result = customCalculator.subtract(10, 5);
+        assertTrue(result == 5);
+        //assertFalse(result == 5); //에러
     }
 
-    //곱하기 테스트 작성
+    // 곱하기 테스트를 진행합니다.
     @Test
-    public void multiply() {
+    public void mulTest(){
         customCalculator = new CustomCalculator();
-        int result = customCalculator.multiply(5,9);
-        /* 이곳에 테스트 코드를 작성하세요. */
-        System.out.println("result :: " + result);
+        int result = customCalculator.multiply(3,4);
+        assertTrue(result == 12);
     }
 
-    //나누기 테스트 작성
+    // 나누기 테스트를 진행합니다.
     @Test
-    public void divide() {
+    public void divTest(){
         customCalculator = new CustomCalculator();
-        int result = customCalculator.divide(25,5);
-        /* 이곳에 테스트 코드를 작성하세요. */
-        System.out.println("result :: " + result);
+        int result = customCalculator.divide(10,2);
+        assertTrue(result == 5);
+        //assertTrue(customCalculator.divide(4,2) == 2);
     }
+
 }
